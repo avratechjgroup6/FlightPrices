@@ -1,0 +1,119 @@
+TravelPayouts key:  
+
+response
+{
+	"success": true,
+	"data": {
+			"NYC":{
+				"0":{
+					"price":826,
+					"airline":"LY",
+					"flight_number":27,
+					"departure_at":"2016-12-14T00:30:00Z",
+					"return_at":"2017-01-16T23:50:00Z",
+					"expires_at":"2016-12-14T00:30:00Z"
+					},
+				"1":{
+					"price":496,
+					"airline":"AF",
+					"flight_number":1621,
+					"departure_at":"2017-01-09T17:30:00Z",
+					"return_at":"2017-01-16T21:40:00Z",
+					"expires_at":"2016-12-13T04:05:54Z"
+					},
+				"2":{
+					"price":512,
+					"airline":"AB",
+					"flight_number":8381,
+					"departure_at":"2017-01-09T05:30:00Z",
+					"return_at":"2017-01-16T18:00:00Z",
+					"expires_at":"2016-12-13T04:05:54Z"
+					},
+				"3":{
+					"price":2901,
+					"airline":"PS",
+					"flight_number":792,
+					"departure_at":"2017-01-09T01:20:00Z",
+					"return_at":"2017-01-16T00:30:00Z",
+					"expires_at":"2016-12-13T04:05:54Z"
+					}
+				}
+		}
+}
+
+airlines.json
+{
+    "name":"El Al Israel Airlines",
+    "alias":null,
+    "iata":"LY",
+    "icao":"ELY",
+    "callsign":"ELAL",
+    "country":"Israel",
+    "is_active":true
+}
+
+airports.json
+{
+    "code":"TLV",
+    "name":"Ben Gurion International",
+    "coordinates":{"lon":34.870743,"lat":32.000454},
+    "time_zone":"Asia/Jerusalem",
+    "name_translations":{
+                            "en":"Ben Gurion International",
+                            "de":"Ben Gurion",
+                            "zh-CN":"本古里安机场",
+                            "ru":"",
+                            "tr":"",
+                            "it":"Ben Gurion Intl",
+                            "fr":"Ben Gurion Intl",
+                            "es":"Ben Gurion Intl",
+                            "th":"สนามบินเบนกูเรียน"
+                        },
+    "country_code":"IL",
+    "city_code":"TLV"
+}
+
+cities.json
+{
+    "code":"TLV",
+    "name":"Tel Aviv Yafo",
+    "coordinates":{"lon":34.870743,"lat":32.000454},
+    "time_zone":"Asia/Jerusalem",
+    "name_translations":{
+                            "en":"Tel Aviv Yafo",
+                            "en-GB":"",
+                            "en-AU":"",
+                            "de":"Tel Aviv Yafo",
+                            "zh-CN":"特拉维夫",
+                            "ru":"Тель-Авив",
+                            "tr":"Tel Aviv",
+                            "en-CA":"",
+                            "en-NZ":"",
+                            "en-IE":"",
+                            "en-SG":"",
+                            "en-IN":"",
+                            "es":"Tel Aviv-Yafo",
+                            "fr":"Tel Aviv-Yafo",
+                            "it":"Tel Aviv-Yafo",
+                            "th":"เทลอาวีฟ"
+                        },
+    "country_code":"IL"
+}
+
+countries.json
+{
+    "code":"IL",
+    "name":"Israel",
+    "currency":"ILS",
+    "name_translations":{
+                            "de":"Israel",
+                            "en":"Israel",
+                            "zh-CN":"以色列",
+                            "tr":"Israel",
+                            "ru":"Израиль",
+                            "fr":"Israël",
+                            "es":"Israel",
+                            "it":"Israele",
+                            "th":"ประเทศอิสราเอล"
+                        }
+}

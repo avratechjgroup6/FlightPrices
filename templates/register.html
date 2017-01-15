@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}Register{% endblock %}
+{% block body %}
+
+    <h1>Register</h1>
+    <form action="{{ url_for('register') }}" method="post">
+        <h2>Name:</h2>
+        <div class="field-wrap">
+            <input type="text" name="name" required autofocus/>
+        </div>
+        <h2>Email Address:</h2>
+        <div class="field-wrap">
+            <input type="email" name="email" required/>
+        </div>
+        <h2>Password:</h2>
+        <div class="field-wrap">
+            <input type="password" name="password" required/>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock %}

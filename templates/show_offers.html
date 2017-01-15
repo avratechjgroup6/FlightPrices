@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block title %}Offers{% endblock %}
+{% block body %}
+
+    {% if user.name=="anon" %}
+        {% set greeting = "" %}
+    {% else %}
+        {% set greeting = " "+user.name %}
+    {% endif %}
+    <h1>Hello{{ greeting }},</h1>
+    <p>
+        The flights we found from <b>{{
+        origin }}</b> to
+        <b>{{ destination }}</b> on <b>{{ departure_date }}</b> are:
+    </p>
+
+    <form action="{{ url_for('submit_choice') }}" method="post">
+        <table>
+
+            <tr>
+                <th>Offers</th>
+                <th>Departs at</th>
+                <th>Airline</th>
+                <th>Flight Number</th>
+                <th>Price</th>
+            </tr>
+            {% for offer in offers %}
+            <tr>
+                <th>
+                    <input type="radio" name="ichoice" value={{ loop.index0 }}
+                    style="height:28px;width:28px">
+                </th>
+                <td>{{ offer[1] }} at {{ offer[2] }}</td>
+                {% for j in 3,4,5 %}
+                <td>{{ offer[j] }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+
+        </table>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock %}

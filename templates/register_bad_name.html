@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block title %}Invalid Name{% endblock %}
+{% block body %}
+
+    <h1>Name must be letters or spaces only.</h1>
+    <ul class="tab-group">
+        <li class="tab"><a href="{{ url_for('register') }}">login</a></li>
+    </ul>
+    <br><br><br>
+
+{% endblock %}

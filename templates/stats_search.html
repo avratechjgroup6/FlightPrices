@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}Statistics Search{% endblock %}
+{% block body %}
+
+    <form action="{{ url_for('statistics') }}" name="stats_search" method="post">
+        <h1>Filter statistics by:</h1>
+            <p style="font-size:20px">(separate entries by comma)</p>
+            <p style="text-align:left">
+                Price:<br>
+                <input type="text" name="price"><br>
+                Airline:<br>
+                <input type="text" name="airline"><br>
+                Date:<br>
+                <input type="text" name="date"><br>
+                Origin:<br>
+                <input type="text" name="origin"><br>
+                Destination:<br>
+                <input type="text" name="destination"><br>
+            </p>
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock %}

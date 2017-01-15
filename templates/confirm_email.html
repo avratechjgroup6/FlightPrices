@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block title %}Confirm Email{% endblock %}
+{% block body %}
+    <form action="{{ url_for('confirm_email') }}" method="post">
+        <div class="field-wrap">
+            <p style="font-size:28px">Please enter the code:</p>
+            <input type="text" name="user_code">
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block title %}Your Flight{% endblock %}
+{% block body %}
+
+    <p style="font-size:28px">You have chosen <b>{{ choice[2] }}</b> flight <b>{{
+        choice[3] }}</b>, departing on
+        <b>{{ choice[0] }}</b> at <b>{{ choice[1] }}</b>.</p><br>
+    <h1>Thank you for choosing <a href="{{ url_for('index') }}">FlightPrices.avratechj</a>.</h1>
+    <br><br><br>
+
+{% endblock %}

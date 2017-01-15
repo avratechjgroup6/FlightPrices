@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block title %}Statistics Results{% endblock %}
+{% block body %}
+
+    {% for graph in graphs %}
+    <h1>{{ graph }}:</h1>
+    <p><img src="{{ graphs[graph] }}" alt="graph for {{ graph }}" style="width:500px;height:100%;"></p>
+    {% endfor %}
+    <a href="{{ url_for('homepage') }}">Home</a>
+
+{% endblock %}

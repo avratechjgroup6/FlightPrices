@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}Forgot Password{% endblock %}
+{% block body %}
+
+    <br><br>
+    <h1>Reset Password</h1><br>
+    <form action="{{ url_for('forgot_pw') }}" method="post">
+        <div class="field-wrap">
+            <p style="font-size:28px">Please enter your email address:
+            <input type="email" name="email" required/></p>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock %}

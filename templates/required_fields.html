@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block title %}All Fields Required{% endblock %}
+{% block body %}
+
+    <p style="font-size:28px">All fields required.</p> <!-- todo: add clarification -->
+    <ul class="tab-group">
+        <li class="tab"><a href="{{ url_for('login') }}">login</a></li>
+    </ul>
+    <br><br><br>
+
+{% endblock %}

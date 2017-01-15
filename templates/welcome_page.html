@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}Welcome to FlightPrices.avratechj{% endblock %}
+{% block body %}
+    <h1>Welcome to FlightPrices.avratechj</h1><br><br>
+
+    <ul class="tab-group">
+        <li class="tab"><a href="{{ url_for('login') }}">login</a></li>
+    </ul>
+    <ul class="tab-group">
+        <li class="tab"><a href="{{ url_for('register') }}">register</a></li>
+    </ul>
+    <p class="forgot"><a href="{{ url_for('forgot_pw') }}">Forgot Password?</a></p><br><br>
+    <form action="{{ url_for('search') }}">
+        <input type="submit" value="Search for Flight Prices">
+        <input type="hidden" name="user_id" value=1>
+    </form>
+
+{% endblock %}

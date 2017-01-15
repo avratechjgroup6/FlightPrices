@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block title %}No Offers{% endblock %}
+{% block body %}
+
+    {% if user.name=="anon" %}
+        {% set greeting = "" %}
+    {% else %}
+        {% set greeting = " "+user.name %}
+    {% endif %}
+    <h1>Hello{{ greeting }},</h1>
+    <p>
+        No offers for your request for a flight from {{
+        user.origin}} to
+        {{ user.destination}} on {{ user.departure_date}}.
+    </p>
+    <p style="font-size:28px"><b>Sorry!</b></p>
+    {% if greeting %}
+    <a href="{{ url_for('homepage') }}">Home</a>
+    {% endif %}
+
+{% endblock %}

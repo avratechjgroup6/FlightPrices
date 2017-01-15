@@ -1,0 +1,74 @@
+{% extends 'layout.html' %}
+{% block title %}History{% endblock %}
+{% block body %}
+
+    <h1>History</h1>
+    <h2>Searches</h2>
+    <br>
+    {% for entry in history %}
+    {% if entry.type == 'search' %}
+    <p style="text-align:left">
+        <b>Date:</b> {{ entry.date }}<br>
+        <b>Origin:</b> {{ entry.origin }}<br>
+        <b>Destination:</b> {{ entry.destination }}
+    </p>
+    {% endif%}
+    {% endfor %}
+    <!--<table>-->
+        <!--<tr>-->
+            <!--<th>Date</th>-->
+            <!--<th>Origin</th>-->
+            <!--<th>Destination</th>-->
+        <!--</tr>-->
+        <!--{% for entry in history %}-->
+        <!--{% if entry.type == 'search' %}-->
+        <!--<tr>-->
+            <!--<td>{{ entry.date }}</td>-->
+            <!--<td>{{ entry.origin }} </td>-->
+            <!--<td>{{ entry.destination }}</td>-->
+        <!--</tr>-->
+        <!--{% endif%}-->
+        <!--{% endfor %}-->
+    <!--</table>-->
+    <h2>Offers</h2>
+    <br>
+    {% for entry in history %}
+    {% if entry.type == 'offer' %}
+    <p style="text-align:left">
+        <b>Date:</b> {{ entry.date }}<br>
+        <b>Time:</b> {{ entry.time }}<br>
+        <b>Origin:</b> {{ entry.origin }}<br>
+        <b>Destination:</b>{{ entry.destination }}<br>
+        <b>Airline:</b> {{ entry.airline }}<br>
+        <b>Flight Number:</b> {{ entry.flight_no }}<br>
+        <b>Price:</b> {{ entry.price }}
+    </p>
+    {% endif%}
+    {% endfor %}
+    <!--<table>-->
+        <!--<tr>-->
+            <!--<th>Date</th>-->
+            <!--<th>Time</th>-->
+            <!--<th>Origin</th>-->
+            <!--<th>Destination</th>-->
+            <!--<th>Airline</th>-->
+            <!--<th>Flight Number</th>-->
+            <!--<th>Price</th>-->
+        <!--</tr>-->
+        <!--{% for entry in history %}-->
+        <!--{% if entry.type == 'offer' %}-->
+        <!--<tr>-->
+            <!--<td>{{ entry.date }}</td>-->
+            <!--<td>{{ entry.time }}</td>-->
+            <!--<td>{{ entry.origin }} </td>-->
+            <!--<td>{{ entry.destination }}</td>-->
+            <!--<td>{{ entry.airline }}</td>-->
+            <!--<td>{{ entry.flight_no }}</td>-->
+            <!--<td>{{ entry.price }}</td>-->
+        <!--</tr>-->
+        <!--{% endif%}-->
+        <!--{% endfor %}-->
+    <!--</table>-->
+    <a href="{{ url_for('homepage') }}">Home</a>
+
+{% endblock %}

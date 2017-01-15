@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}Reset Password{% endblock %}
+{% block body %}
+
+    <form action="{{ url_for('reset_pw') }}" method="post">
+        <p style="font-size:28px">Please enter your new password:</p>
+        <input type="password" name="new_pw">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock %}
