@@ -113,16 +113,16 @@ def login():
         try:
             found_pw = db_procs.get_password(email)
         except:
-            return render_template("required_fields.html")
+            return render_template("login_failed.html")
         if found_pw:
             if found_pw == hash_pw(request.form.get('password')):
                 session['user_id'] = db_procs.get_user_id(email)
                 session['logged_in'] = True
                 return redirect(url_for("homepage"))
             else:
-                return render_template("login_wrong_pw.html")
+                return render_template("login_failed.html")
         else:
-            return render_template("login_no_email.html")
+            return render_template("login_failed.html")
     return render_template("login.html")
 
 
